@@ -1,10 +1,12 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+# <<<<<<<<<<<<<<ESTE É O FAKE >>>>>>>>>>>>>>>>>>>>>>>
+
 *** Variables ***
 ${URL}    https://www.amazon.com.br
-${MAIS_VENDIDOS}    //a[@href='/gp/bestsellers/?ref_=nav_cs_bestsellers'][contains(.,'Mais Vendidos')]   
-...    #//a[@href='/gp/bestsellers/?ref_=nav_cs_bestsellers'][contains(.,'Eletrônicos')]
+${MAIS_VENDIDOS}    //a[@href='/gp/bestsellers/?ref_=nav_cs_bestsellers'][contains(.,'Mais Vendidos')] 
+${MAIS VENDIDOS EM COZINHA}
 
 *** Keywords ***
 Abrir o navegador
@@ -23,7 +25,7 @@ Entrar no menu "Mais vendidos"
 
 Verificar se aparece a frase "Mais vendidos"
     Wait Until Page Contains    text=Mais Vendidos 
-#   Wait Until Element Is Visible    locator
+    Wait Until Element Is Visible    locator=//h2[@class='a-carousel-heading a-inline-block'][contains(.,'Mais Vendidos em Cozinha')]
 
 # Verificar se o título da página fica "${TITULO}" 
 #     Title Should Be    title=${TITULO}  

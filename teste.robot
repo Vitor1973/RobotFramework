@@ -4,6 +4,7 @@ Resource       teste_resources.robot
 Test Setup     Abrir o navegador
 Test Teardown  Fechar o navegador
 
+# <<<<<<<<<<<<<<ESTE É O FAKE >>>>>>>>>>>>>>>>>>>>>>>
 
 *** Test Cases ***
 Caso de Teste 01 - Acesso ao menu "MAIS_VENDIDOS"
