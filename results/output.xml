@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230615 12:18:15.643" rpa="false" schemaversion="3">
+<suite id="s1" name="Teste" source="C:\Users\devec\OneDrive\Área de Trabalho\Curso_Robot\teste.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;MAIS_VENDIDOS&quot;" line="10">
+<kw name="Abrir o navegador" library="teste_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230615 12:18:15.810" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230615 12:18:15.810" endtime="20230615 12:18:16.948"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230615 12:18:16.948" endtime="20230615 12:18:17.070"/>
+</kw>
+<status status="PASS" starttime="20230615 12:18:15.810" endtime="20230615 12:18:17.070"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br" library="teste_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230615 12:18:17.070" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20230615 12:18:17.070" endtime="20230615 12:18:18.832"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${MAIS_VENDIDOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230615 12:18:18.832" endtime="20230615 12:18:18.856"/>
+</kw>
+<status status="PASS" starttime="20230615 12:18:17.070" endtime="20230615 12:18:18.856"/>
+</kw>
+<kw name="Entrar no menu &quot;Mais vendidos&quot;" library="teste_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${MAIS_VENDIDOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230615 12:18:18.856" level="INFO">Clicking element '//a[@href='/gp/bestsellers/?ref_=nav_cs_bestsellers'][contains(.,'Mais Vendidos')]'.</msg>
+<status status="PASS" starttime="20230615 12:18:18.856" endtime="20230615 12:18:19.398"/>
+</kw>
+<status status="PASS" starttime="20230615 12:18:18.856" endtime="20230615 12:18:19.398"/>
+</kw>
+<kw name="Verificar se aparece a frase &quot;Mais vendidos&quot;" library="teste_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=Mais Vendidos</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230615 12:18:19.398" endtime="20230615 12:18:19.449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//h2[@class='a-carousel-heading a-inline-block'][contains(.,'Mais Vendidos em Cozinha')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230615 12:18:19.457" endtime="20230615 12:18:19.665"/>
+</kw>
+<status status="PASS" starttime="20230615 12:18:19.398" endtime="20230615 12:18:19.665"/>
+</kw>
+<kw name="Fechar o navegador" library="teste_resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230615 12:18:19.665" endtime="20230615 12:18:21.820"/>
+</kw>
+<status status="PASS" starttime="20230615 12:18:19.665" endtime="20230615 12:18:21.820"/>
+</kw>
+<doc>Este teste verifica o menu eletrônicos do site da Amazon.com.br</doc>
+<tag>categotias</tag>
+<tag>menus</tag>
+<status status="PASS" starttime="20230615 12:18:15.796" endtime="20230615 12:18:21.820"/>
+</test>
+<doc>Essa suite testa o site da Amazon.com.br</doc>
+<status status="PASS" starttime="20230615 12:18:15.643" endtime="20230615 12:18:21.820"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">categotias</stat>
+<stat pass="1" fail="0" skip="0">menus</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste">Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
